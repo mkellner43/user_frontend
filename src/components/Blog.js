@@ -5,15 +5,6 @@ import { format, parseISO } from 'date-fns';
 const Blog = () => {
   let {state} = useLocation();
   return (
-    // <section className='center mt-1'>
-    //   <div className='blog-info'>
-    //     <p>{state.author.username}</p>
-    //     <p>{format(parseISO(state.date), "LLL dd, yyyy", "UTC")}</p>
-    //     <h2>{state.title}</h2>
-    //     <p>{state.blog_post}</p>
-    //   </div>
-    //     <Comment blog={state._id}/>
-    // </section>
     <section className='container mt-1'>
       <h1 className='mt-1'>Admin Blog Access</h1>
       <div className='blog_post mt-1'>

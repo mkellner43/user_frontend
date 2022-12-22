@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-
-const Nav = () => {
+import Hamburger from './Hamburger'
+const Nav = ({navActive, setActive}) => {
   const [search, setSearch] = useState([])
 
   const handleChange = (e) => {
@@ -15,9 +15,11 @@ const Nav = () => {
       .then((res) => res.json())
       .then((json) => setSearch(json))
   }
+
   return (
     <nav className="nav">
-      <section className="nav--right pl-2">
+      <section className="nav--right">
+      <Hamburger navActive={navActive} setActive={setActive}/>
         <h1><Link to="/" className='logo' >Matt's Blog</Link></h1>
       </section>
       <section className="nav--right pr-2">
